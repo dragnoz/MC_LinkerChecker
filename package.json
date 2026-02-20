@@ -38,8 +38,31 @@
       {
         "command": "extension.sayHello",
         "title": "Say Hello"
+      },
+      {
+        "command": "mrt.telegram.testConnection",
+        "title": "MRT: Test Telegram Connection"
+      },
+      {
+        "command": "mrt.telegram.sendMessage",
+        "title": "MRT: Send Telegram Message"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "MineNoz",
+      "properties": {
+        "mrt.telegram.botToken": {
+          "type": "string",
+          "default": "",
+          "description": "Telegram Bot API token. Create a bot via @BotFather on Telegram. Keep this value secret — do not commit it to version control or share it publicly."
+        },
+        "mrt.telegram.chatId": {
+          "type": "string",
+          "default": "",
+          "description": "Telegram chat ID where notifications will be sent."
+        }
+      }
+    }
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
